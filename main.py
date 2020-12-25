@@ -24,6 +24,12 @@ async def start(client, message):
         True,
     )
 
+@TGraph.on_message(filters.command("help"))
+async def start(client, message):
+    await message.reply_text(
+        f"You just need to send the photo here,\nand the bot will upload it to Telegraph",
+        True,
+    )
 
 @TGraph.on_message(filters.photo)
 async def getimage(client, message):
